@@ -1,0 +1,71 @@
+.testimonial {
+  .title {
+    @include primary-text(90px);
+    color: $primary-color;
+  }
+  .item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__brand {
+      display: block;
+      margin: 0 auto 60px;
+    }
+    &__text {
+      @include secondary-text(13px, 17px, 0.16907px);
+      max-width: 280px;
+      color: $secondary-color;
+      margin-bottom: 52px;
+      text-align: center;
+      @include screen(lg) {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 60px;
+      }
+    }
+    &__disc {
+      margin: 0 auto 75px;
+      display: flex;
+      align-items: center;
+      width: fit-content;
+    }
+    &__avatar {
+      width: 44px;
+      height: 44px;
+      margin-right: 8px;
+      @include screen(lg) {
+        width: 52px;
+        height: 52px;
+      }
+    }
+    &__name {
+      @include secondary-text(10px, 15px, 0.08px);
+      color: $secondary-color;
+      @include screen(lg) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+    &__title {
+      font-size: 12px;
+      line-height: 23px;
+      letter-spacing: 0.16907px;
+      color: $primary-color;
+      @include screen(lg) {
+        font-size: 15px;
+        line-height: 27px;
+      }
+    }
+  }
+  .button-wrap {
+    display: flex;
+    justify-content: center;
+    button {
+      @include secondary-text(22px, 33px, 0.1px);
+      @include button(16px, 47px, $blue, #fff, $dark);
+      text-align: center;
+    }
+  }
+}

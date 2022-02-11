@@ -1,0 +1,79 @@
+@mixin screen($breakpoint) {
+  @if $breakpoint==xs {
+    @media screen and (max-width: 320px) {
+      @content;
+    }
+  }
+  @if $breakpoint==sm {
+    @media screen and (min-width: 576px) {
+      @content;
+    }
+  }
+  @if $breakpoint==md {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint==lg {
+    @media screen and (min-width: 992px) {
+      @content;
+    }
+  }
+  @if $breakpoint==xl {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint==2xl {
+    @media screen and (min-width: 1400px) {
+      @content;
+    }
+  }
+}
+
+@mixin primary-text($margin) {
+  font-size: 46px;
+  line-height: 57px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  font-weight: 400;
+  margin-bottom: $margin;
+}
+@mixin secondary-text($size, $line, $letter) {
+  font-weight: bold;
+  font-size: $size;
+  line-height: $line;
+  // text-align: center;
+  letter-spacing: $letter;
+}
+
+@mixin button($p-tb, $p-rl, $bg, $color, $color-h) {
+  margin: 0 auto;
+  padding: $p-tb $p-rl;
+  background: $bg;
+  border-radius: 35px;
+  color: $color;
+  border-color: transparent;
+  transition: all 0.2s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+@mixin input($width) {
+  font-weight: initial;
+  text-align: initial;
+  width: $width;
+  padding: 19px 35px;
+  outline: none;
+  background: #f4f4f4;
+  border: 1px solid #e8e8e8;
+  border-radius: 39px;
+  color: $dark;
+  &::placeholder {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    color: $dark;
+  }
+} ;

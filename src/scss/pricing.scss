@@ -1,0 +1,134 @@
+.pricing {
+  .title-wrap {
+    margin-bottom: 90px;
+    .title {
+      @include primary-text(26px);
+      color: $primary-color;
+    }
+    .text {
+      @include secondary-text(16px, 20px, 0.2px);
+      color: $secondary-color;
+      text-align: center;
+    }
+  }
+  .list-item {
+    @include screen(lg) {
+      display: flex;
+      flex-direction: column;
+      @include screen(lg) {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+    .item {
+      max-width: 335px;
+      border: 1px solid #dedede;
+      box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+      border-radius: 10px;
+      padding: 40px;
+      margin: 0 auto 52px;
+      transition: all 0.2s;
+      position: relative;
+      @include screen(lg) {
+        max-width: 335px;
+        margin: 0;
+        flex-grow: 1;
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+      @include screen(xl) {
+        &:not(:last-child) {
+          margin-right: 52px;
+        }
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        border-radius: 10px;
+        background: linear-gradient(39.97deg, #ef2779 0.79%, #7834be 79.29%);
+        opacity: 0;
+        transition: all 0.5s linear 0s;
+      }
+      &:hover:after {
+        opacity: 1;
+      }
+      &:hover {
+        p,
+        h3 {
+          color: #fff;
+        }
+        .price-wrap {
+          .price,
+          div .currency,
+          div .period {
+            color: #fff;
+          }
+        }
+        button {
+          background-color: #fff;
+          color: #ef2779;
+        }
+      }
+      &__title {
+        @include secondary-text(22px, 33px, 0.1px);
+        text-align: initial;
+        text-transform: uppercase;
+        color: $primary-color;
+        margin-bottom: 4px;
+        position: relative;
+        z-index: 1;
+      }
+      &__text {
+        @include secondary-text(12px, 18px, 0.1px);
+        text-align: initial;
+        color: $secondary-color;
+        margin-bottom: 32px;
+        position: relative;
+        z-index: 1;
+      }
+      .price-wrap {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        padding-left: 10px;
+        position: relative;
+        z-index: 1;
+
+        .price {
+          @include secondary-text(55px, 65px, 0.2px);
+          color: $primary-color;
+          padding-right: 10px;
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+          .currency {
+            @include secondary-text(22px, 33px, 0.1px);
+            color: $primary-color;
+          }
+          .period {
+            @include secondary-text(12px, 18px, 0.1px);
+            color: $secondary-color;
+          }
+        }
+      }
+      &__button {
+        @include secondary-text(16px, 16px, 0.2px);
+        @include button(18px, 38px, $blue, #fff, $dark);
+        font-weight: 500;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+      }
+    }
+  }
+}

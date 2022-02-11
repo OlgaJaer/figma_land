@@ -1,0 +1,31 @@
+.try-for-free {
+  @include screen(xs) {
+    display: none;
+  }
+  overflow: hidden;
+  .title {
+    @include primary-text(26px);
+    color: $primary-color;
+  }
+  .text {
+    @include secondary-text(16px, 20px, 0.2px);
+    color: $secondary-color;
+    margin-bottom: 90px;
+    text-align: center;
+  }
+  .button-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 110px;
+    button {
+      @include secondary-text(22px, 33px, 0.1px);
+      @include button(16px, 58px, $blue, #fff, $dark);
+      text-align: center;
+    }
+  }
+  img {
+    width: 100%;
+    @include screen(md) {
+    }
+  }
+}

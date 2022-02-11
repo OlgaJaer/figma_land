@@ -1,0 +1,41 @@
+.subscribe {
+  background: linear-gradient(39.97deg, #ef2779 0.79%, #7834be 79.29%);
+  .subtitle {
+    @include secondary-text(22px, 33px, 0.1px);
+    color: #fff;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .title {
+    @include primary-text(68px);
+    color: #fff;
+  }
+  form {
+    max-width: 353px;
+    margin: 0 auto;
+    .subtitle {
+      @include secondary-text(22px, 33px, 0.1px);
+      color: #fff;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .text {
+      @include secondary-text(18px, 27px, 0.2px);
+      font-weight: initial;
+      color: #fff;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    input {
+      @include secondary-text(14px, 16px, 0.1px);
+      @include input(100%);
+      margin-bottom: 10px;
+    }
+    button {
+      @include button(17px, 35px, $pink, #fff, $dark);
+      width: 100%;
+      justify-content: center;
+      font-size: 16px;
+    }
+  }
+}

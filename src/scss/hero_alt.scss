@@ -1,0 +1,115 @@
+.hero {
+  &-bg {
+    // height: 100vh;
+    background-image: url("../img/images/gradient-s.png");
+    background-size: cover;
+    background-position: center bottom;
+    position: relative;
+    @include screen(lg) {
+      background-image: url("../img/images/gradient.png");
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    // align-items: center;
+    @include screen(lg) {
+      flex-direction: row;
+    }
+  }
+  &-left {
+    // box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.16);
+    flex-basis: 54%;
+    display: none;
+    // width: 54%;
+    @include screen(lg) {
+      display: inherit;
+    }
+    .decoration-img {
+      width: 100%;
+
+      box-shadow: 0px 10px 131px 0px rgba(0, 0, 0, 0.23);
+
+      // object-fit: cover;
+    }
+  }
+  &-right {
+    display: flex;
+    flex-direction: column;
+
+    // width: 35%;
+    @include screen(md) {
+      max-width: 80%;
+    }
+    @include screen(lg) {
+      align-items: flex-start;
+      justify-content: start;
+      flex-basis: 35%;
+      padding-left: 86px;
+    }
+    &__title {
+      @include primary-text(0px);
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 27px;
+      @include screen(lg) {
+        margin-top: 12%;
+      }
+      @include screen(xl) {
+        font-weight: 900;
+        font-size: 55px;
+        line-height: 65px;
+        text-align: left;
+        // margin-left: 0;
+      }
+    }
+    &__text {
+      @include secondary-text(16px, 20px, 0.2px);
+      // font-weight: bold;
+      // font-size: 16px;
+      // line-height: 20px;
+      // letter-spacing: 0.2px;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 15%;
+      @include screen(lg) {
+        text-align: left;
+        margin-bottom: 17%;
+      }
+    }
+    .decoration-img {
+      width: 100%;
+      // margin-bottom: 60px;
+      @include screen(lg) {
+        display: none;
+      }
+    }
+    .action-button-wrap {
+      // padding-bottom: 110px;
+      .action-button {
+        @include button(16px, 50px, $blue, #fff, $dark);
+        // margin-left: auto;
+        // margin-right: auto;
+        display: flex;
+        align-items: center;
+        // height: 56px;
+        padding: 16px 58px;
+        background: #38a3f1;
+        border-radius: 35px;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 33px;
+        letter-spacing: 0.1px;
+        color: #ffffff;
+        @include screen(lg) {
+          // height: 64px;
+          background: #fff;
+          color: #38a3f1;
+          // margin-left: unset;
+        }
+      }
+    }
+  }
+}

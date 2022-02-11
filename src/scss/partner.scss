@@ -1,0 +1,74 @@
+.partner {
+  .title-wrap {
+    margin-bottom: 100px;
+    .title {
+      @include primary-text(26px);
+      color: $primary-color;
+    }
+    .text {
+      @include secondary-text(16px, 20px, 0.2px);
+      // margin-bottom: 92px;
+      color: $secondary-color;
+      text-align: center;
+    }
+  }
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include screen(lg) {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+  &__card {
+    max-width: 218px;
+    margin-bottom: 90px;
+    flex-basis: calc(33% - 72px);
+    @include screen(lg) {
+      // margin-bottom: 70px;
+      display: flex;
+      flex-direction: column;
+      &:not(:nth-child(3n)) {
+        margin-right: 72px;
+      }
+    }
+    &:nth-child(n + 4) {
+      display: none;
+      @include screen(lg) {
+        display: block;
+      }
+    }
+  }
+  &__name {
+    @include secondary-text(12px, 18px, 0.1px);
+    color: $secondary-color;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  &__img {
+    margin-bottom: 25px;
+  }
+  &__logo {
+    display: block;
+    margin: 0 auto;
+  }
+  &__description {
+    @include secondary-text(18px, 27px, 0.2px);
+    font-weight: 400;
+    color: $secondary-color;
+    margin-top: auto;
+    text-align: center;
+  }
+
+  .button-wrap {
+    button {
+      @include secondary-text(22px, 33px, 0.1px);
+      @include button(16px, 58px, $blue, #fff, $dark);
+      display: flex;
+      text-align: center;
+    }
+  }
+}
