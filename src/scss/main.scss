@@ -42,7 +42,6 @@ ul {
   margin: 0 auto;
   &--hero {
     height: 100vh;
-
     display: flex;
     align-items: center;
     width: 100%;
@@ -56,13 +55,13 @@ ul {
     }
   }
   &--header {
-    max-width: 1390px;
     width: 100%;
-    padding: 0px 20px 0 20px;
+    padding: 0px 26px 0 26px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     @include screen(lg) {
+      max-width: 1390px;
       align-items: center;
     }
   }

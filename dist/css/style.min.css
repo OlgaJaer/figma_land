@@ -52,15 +52,15 @@ ul {
   }
 }
 .container--header {
-  max-width: 1390px;
   width: 100%;
-  padding: 0px 20px 0 20px;
+  padding: 0px 26px 0 26px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 @media screen and (min-width: 992px) {
   .container--header {
+    max-width: 1390px;
     align-items: center;
   }
 }
@@ -191,12 +191,8 @@ ul {
   }
 }
 .hero header .logo {
-  min-width: 186px;
+  width: 100%;
   height: auto;
-}
-.hero header .logo__img {
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 .hero header .menu {
   display: none;
@@ -211,14 +207,11 @@ ul {
   display: flex;
   align-items: center;
 }
-.hero header .menu__item {
-  display: inline-block;
-  padding-left: 41px;
-}
 .hero header .menu__link {
   text-decoration: none;
   color: #fff;
   transition: all 0.2s;
+  padding-left: 41px;
 }
 .hero header .menu__link:hover {
   color: #ef2779;
@@ -453,7 +446,7 @@ ul {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   transition-duration: 0.8s;
 }
-.fixed-menu__item {
+.fixed-menu__link {
   display: block;
   padding: 12px 40px;
   font-size: 16px;
@@ -474,13 +467,7 @@ ul {
 
 .menu__icon::before {
   content: "";
-  padding: 30px 30px 30px 30px;
-  cursor: pointer;
-}
-
-.menu__icon::after {
-  content: "";
-  padding: 30px 30px 30px 30px;
+  padding: 30px 22px 30px 30px;
   cursor: pointer;
 }
 
@@ -571,7 +558,7 @@ ul {
 .try-for-free {
   overflow: hidden;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) {
   .try-for-free {
     display: none;
   }

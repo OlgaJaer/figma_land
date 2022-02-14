@@ -15,7 +15,7 @@
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 40%);
     transition-duration: 0.8s;
   }
-  &__item {
+  &__link {
     display: block;
     padding: 12px 40px;
     font-size: 16px;
@@ -36,14 +36,14 @@
 }
 .menu__icon::before {
   content: "";
-  padding: 30px 30px 30px 30px;
+  padding: 30px 22px 30px 30px;
   cursor: pointer;
 }
-.menu__icon::after {
-  content: "";
-  padding: 30px 30px 30px 30px;
-  cursor: pointer;
-}
+// .menu__icon::after {
+//   content: "";
+//   padding: 30px 30px 30px 30px;
+//   cursor: pointer;
+// }
 .menu__icon:hover > .fixed-menu__list {
   visibility: visible;
   right: 0;
